@@ -1,0 +1,17 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.fileLoader {
+    display: none;
+    justify-content: flex-start;
+    opacity: 80%;
+}
+
+.areaContainer {
+    width: 100%;
+    margin-top: 70px;
+}

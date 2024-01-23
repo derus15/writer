@@ -1,0 +1,13 @@
+.textarea {
+    font-size: 20px;
+    background: #242424;
+    border: none;
+    margin-top: 30px;
+    width: 1000px;
+    height: 500px;
+    resize: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
