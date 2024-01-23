@@ -4,7 +4,7 @@ import style from './TextArea.module.css';
 interface TextAreaProps {
     setText: Dispatch<string>
     value: string;
-}b
+}
 
 const TextArea = ({setText, value}: TextAreaProps) => {
 
