@@ -1,4 +1,5 @@
 import {Dispatch, useEffect} from 'react';
+import style from './FileLoader.module.css'
 
 interface FileLoaderProps {
     setText: Dispatch<string>
@@ -11,7 +12,7 @@ const FileLoader = ({setText}: FileLoaderProps) => {
     const handleDrop = (event: DragEvent) => {
 
         event.preventDefault();
-        // @ts-expect-error
+
         const files = event.dataTransfer.files;
         const file = files[0];
         reader.readAsText(file);
@@ -40,7 +41,7 @@ const FileLoader = ({setText}: FileLoaderProps) => {
         <input
             type="file"
             accept='text/markdown'
-            className={'fileLoader'}
+            className={style.fileLoader}
         />
     );
 };
