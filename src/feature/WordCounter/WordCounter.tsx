@@ -1,10 +1,9 @@
 import style from './WordCounter.module.css'
+import {useTextStore} from './../../entities/Text/index.ts';
 
-interface WordCounterProps {
-    text: string
-}
+const WordCounter = () => {
 
-const WordCounter = ({text}: WordCounterProps) => {
+    const text = useTextStore.use.text();
 
     const countWords = () => {
         if (text.trim() !== "") { // проверяем, не является ли строка пустой

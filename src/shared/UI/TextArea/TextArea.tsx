@@ -1,28 +1,32 @@
-import {ChangeEvent, Dispatch, useEffect} from 'react';
+import {ChangeEvent, useEffect} from 'react';
 import style from './TextArea.module.css';
+import {useTextStore} from './../../../entities/Text/index.ts';
 
-interface TextAreaProps {
-    setText: Dispatch<string>
-    value: string;
-}
+const TextArea = () => {
 
-const TextArea = ({setText, value}: TextAreaProps) => {
+    const setText = useTextStore.use.change();
+    const text = useTextStore.use.text();
 
     const textEdit = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        localStorage.setItem('text', value);
         setText(e.target.value);
     }
 
     useEffect(() => {
+        if (text) {
+            localStorage.setItem('text', text);
+        }
+    }, [text]);
+
+    useEffect(() => {
         const savedText = localStorage.getItem('text');
-        setText(savedText);
+        setText(savedText || '');
     }, []);
 
     return (
         <textarea
             autoFocus
             placeholder={'Просто начните писать...'}
-            value={value}
+            value={text}
             className={style.textarea}
             onChange={textEdit}
         />

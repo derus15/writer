@@ -1,13 +1,11 @@
-import {Dispatch, useEffect} from 'react';
+import { useEffect } from 'react';
 import style from './FileLoader.module.css'
+import { useTextStore } from './../../../entities/Text/index.ts';
 
-interface FileLoaderProps {
-    setText: Dispatch<string>
-}
-
-const FileLoader = ({setText}: FileLoaderProps) => {
+const FileLoader = () => {
 
     const reader = new FileReader();
+    const setText = useTextStore.use.change();
 
     const handleDrop = (event: DragEvent) => {
 
@@ -47,3 +45,4 @@ const FileLoader = ({setText}: FileLoaderProps) => {
 };
 
 export default FileLoader;
+
