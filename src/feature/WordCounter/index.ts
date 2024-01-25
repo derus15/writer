@@ -1,0 +1,1 @@
+export { WordCounter } from './UI/WordCounter.tsx'

@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import style from './FileLoader.module.css'
-import { useTextStore } from './../../../entities/Text/index.ts';
+import { useTextStore } from 'entities/Text';
 
-const FileLoader = () => {
+export const FileLoader = () => {
 
     const reader = new FileReader();
     const setText = useTextStore.use.change();
@@ -44,5 +44,4 @@ const FileLoader = () => {
     );
 };
 
-export default FileLoader;
 

@@ -1,8 +1,8 @@
 import {ChangeEvent, useEffect} from 'react';
 import style from './TextArea.module.css';
-import {useTextStore} from './../../../entities/Text/index.ts';
+import { useTextStore } from 'entities/Text';
 
-const TextArea = () => {
+export const TextArea = () => {
 
     const setText = useTextStore.use.change();
     const text = useTextStore.use.text();
@@ -20,7 +20,7 @@ const TextArea = () => {
     useEffect(() => {
         const savedText = localStorage.getItem('text');
         setText(savedText || '');
-    }, []);
+    }, [setText]);
 
     return (
         <textarea
@@ -33,4 +33,3 @@ const TextArea = () => {
     );
 };
 
-export default TextArea;

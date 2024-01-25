@@ -1,8 +1,10 @@
 import './style/App.css'
-import TextArea from '../shared/UI/TextArea/TextArea.tsx';
-import FullScreenSwitcher from '../shared/UI/FullScreenSwitcher/FullScreenSwitcher.tsx';
-import FileLoader from '../shared/UI/FileLoader/FileLoader.tsx';
-import WordCounter from '../feature/WordCounter/WordCounter.tsx';
+import { FileLoader } from 'widgets/FileLoader';
+import { FullScreenSwitcher } from 'widgets/FullScreenSwitcher';
+import { TextArea } from 'widgets/TextArea';
+import { SaveButton } from 'feature/SaveFile';
+import { WordCounter } from 'feature/WordCounter';
+
 
 function App() {
 
@@ -13,6 +15,7 @@ function App() {
             <div className={'areaContainer'}>
                 <TextArea />
             </div>
+            <SaveButton />
             <WordCounter />
         </>
     )

@@ -1,6 +1,6 @@
 import style from './FullScreenSwitcher.module.css'
 
-const FullScreenSwitcher = () => {
+export const FullScreenSwitcher = () => {
 
     const toggleFullScreen = () => {
         if (!document.fullscreenElement) {
@@ -13,8 +13,10 @@ const FullScreenSwitcher = () => {
     };
 
     return (
-        <div className={style.fullscreen} onClick={toggleFullScreen}/>
+        <div
+            className={style.fullscreen}
+            onClick={toggleFullScreen}
+        />
     );
 };
 
-export default FullScreenSwitcher;
