@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import style from './FileLoader.module.css'
+import style from './FileLoader.module.css';
 import { useTextStore } from 'entities/Text';
 
 export const FileLoader = () => {
@@ -13,6 +13,7 @@ export const FileLoader = () => {
 
         const files = event.dataTransfer.files;
         const file = files[0];
+
         reader.readAsText(file);
         reader.onload = () => {
 
@@ -20,7 +21,7 @@ export const FileLoader = () => {
             setText(fileContent);
 
         };
-    }
+    };
 
     function handleDragOver(event: { preventDefault: () => void; }) {
         event.preventDefault();
@@ -32,7 +33,7 @@ export const FileLoader = () => {
         return () => {
             window.removeEventListener('drop', handleDrop);
             window.removeEventListener('dragover', handleDragOver);
-        }
+        };
     }, []);
 
     return (

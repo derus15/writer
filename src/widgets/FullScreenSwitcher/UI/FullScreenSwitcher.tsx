@@ -1,4 +1,4 @@
-import style from './FullScreenSwitcher.module.css'
+import style from './FullScreenSwitcher.module.css';
 
 export const FullScreenSwitcher = () => {
 

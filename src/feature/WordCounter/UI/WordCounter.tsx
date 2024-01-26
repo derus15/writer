@@ -1,4 +1,4 @@
-import style from './WordCounter.module.css'
+import style from './WordCounter.module.css';
 import { useTextStore } from 'entities/Text';
 
 export const WordCounter = () => {
@@ -10,7 +10,7 @@ export const WordCounter = () => {
 
             return text.trim().split(" ").length;
         }
-    }
+    };
 
     const characters = text.length;
     const words = countWords() || 0;

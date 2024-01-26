@@ -1,4 +1,4 @@
-import './style/App.css'
+import './style/App.css';
 import { FileLoader } from 'widgets/FileLoader';
 import { FullScreenSwitcher } from 'widgets/FullScreenSwitcher';
 import { TextArea } from 'widgets/TextArea';
@@ -18,7 +18,7 @@ function App() {
             <SaveButton />
             <WordCounter />
         </>
-    )
+    );
 }
 
-export default App
+export default App;

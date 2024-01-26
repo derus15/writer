@@ -1,1 +1,1 @@
-export { FullScreenSwitcher } from './UI/FullScreenSwitcher.tsx'
+export { FullScreenSwitcher } from './UI/FullScreenSwitcher.tsx';

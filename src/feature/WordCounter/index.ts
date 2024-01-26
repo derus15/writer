@@ -1,1 +1,1 @@
-export { WordCounter } from './UI/WordCounter.tsx'
+export { WordCounter } from './UI/WordCounter.tsx';

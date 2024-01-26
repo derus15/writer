@@ -1,1 +1,1 @@
-export { FileLoader } from './UI/FileLoader.tsx'
+export { FileLoader } from './UI/FileLoader.tsx';

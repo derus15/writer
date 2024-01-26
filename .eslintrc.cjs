@@ -17,5 +17,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
   'indent': [2, 4],
+  'semi': [2, "always"],
+  '@typescript-eslint/ban-ts-comment': 0,
   },
 }

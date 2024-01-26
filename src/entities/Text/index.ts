@@ -1,1 +1,1 @@
-export { useTextStore } from './store/textStore.ts'
+export { useTextStore } from './store/textStore.ts';
