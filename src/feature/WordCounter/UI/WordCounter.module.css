@@ -1,6 +1,10 @@
 .container {
-    position: absolute;
-    right: 2rem;
-    opacity: 60%;
+    position: fixed;
+    display: flex;
+    width: 75vw;
     font-size: 14px;
+}
+
+.counter {
+    margin-left: auto;
 }

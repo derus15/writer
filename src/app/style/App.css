@@ -1,6 +1,6 @@
 #root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    color: rgba(255, 255, 255, 0.87);
+    color: rgba(255, 255, 255, 0.80);
     line-height: 1.5;
     font-weight: 400;
     color-scheme: dark;
@@ -20,6 +20,33 @@ body {
     min-width: 320px;
     min-height: 100vh;
     background-color: #242424;
+    opacity: 60%;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #242424;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+}
+
+body::-webkit-scrollbar-track {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    border: 5px solid rgba(255, 255, 255, 0.7);
+}
+
+body::-webkit-scrollbar-thumb:active {
+    border: 5px solid rgba(255, 255, 255, 0.8);
 }
 
 .areaContainer {

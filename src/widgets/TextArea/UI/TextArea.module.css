@@ -1,5 +1,5 @@
 .textarea {
-    font-size: 20px;
+    font-size: 21px;
     background: #242424;
     border: none;
     width: 75vw;
@@ -7,6 +7,10 @@
     resize: none;
 }
 
-textarea:focus, input:focus{
+.textarea:empty::before {
+    content: 'Just start writing...';
+}
+
+div:focus {
     outline: none;
 }

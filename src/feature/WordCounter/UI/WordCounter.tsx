@@ -17,7 +17,9 @@ export const WordCounter = () => {
 
     return (
         <div className={style.container}>
-            Signs: {characters} Words: {words}
+            <span className={style.counter}>
+                Signs: {characters} Words: {words}
+            </span>
         </div>
     );
 };
