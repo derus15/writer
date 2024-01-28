@@ -6,6 +6,7 @@
     height: 15px;
     border: white 2px solid;
     cursor: pointer;
+    opacity: 60%;
     border-top-right-radius: 10px;
 }
 

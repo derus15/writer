@@ -1,9 +1,6 @@
 #root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    color: rgba(255, 255, 255, 0.80);
-    line-height: 1.5;
-    font-weight: 400;
-    color-scheme: dark;
+    color: rgba(255, 255, 255);
     position: relative;
     margin: 0 auto;
     padding: 2rem;
@@ -20,7 +17,6 @@ body {
     min-width: 320px;
     min-height: 100vh;
     background-color: #242424;
-    opacity: 60%;
 }
 
 body::-webkit-scrollbar {

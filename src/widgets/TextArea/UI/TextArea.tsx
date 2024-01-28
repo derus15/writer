@@ -6,12 +6,11 @@ export const TextArea = () => {
 
     const setText = useTextStore.use.change();
     const text = useTextStore.use.text();
-    const ref = useRef<HTMLDivElement | null>(null);
-
+    const textArea = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        if (ref.current) {
-            ref.current.textContent = text;
+        if (textArea.current) {
+            textArea.current.textContent = text;
         }
     }, [text]);
 
@@ -22,7 +21,7 @@ export const TextArea = () => {
 
     return (
         <div
-            ref={ref}
+            ref={textArea}
             contentEditable="plaintext-only"
             className={style.textarea}
             onInput={textEdit}

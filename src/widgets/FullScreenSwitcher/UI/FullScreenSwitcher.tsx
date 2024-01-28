@@ -1,4 +1,5 @@
 import style from './FullScreenSwitcher.module.css';
+import {Tooltip} from 'react-tooltip';
 
 export const FullScreenSwitcher = () => {
 
@@ -13,10 +14,14 @@ export const FullScreenSwitcher = () => {
     };
 
     return (
-        <div
-            className={style.fullscreen}
-            onClick={toggleFullScreen}
-        />
+        <>
+            <div
+                className={style.fullscreen}
+                onClick={toggleFullScreen}
+                id='fullScreen'
+            />
+            <Tooltip anchorSelect='#fullScreen' place="top" content={'Fullscreen'}/>
+        </>
     );
 };
 

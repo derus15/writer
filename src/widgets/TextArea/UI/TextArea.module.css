@@ -5,10 +5,13 @@
     width: 75vw;
     height: 75vh;
     resize: none;
+    color: white;
+    opacity: 100%;
 }
 
 .textarea:empty::before {
     content: 'Just start writing...';
+    opacity: 60%;
 }
 
 div:focus {
