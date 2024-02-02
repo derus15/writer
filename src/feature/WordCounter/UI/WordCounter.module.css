@@ -1,5 +1,5 @@
 .container {
-    position: fixed;
+    position: absolute;
     display: flex;
     width: 75vw;
     font-size: 14px;

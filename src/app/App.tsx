@@ -10,12 +10,17 @@ function App() {
 
     return (
         <>
-            <FileLoader />
-            <FullScreenSwitcher />
+            <header className={'header'}>
+                <FileLoader />
+                <span className={'title'}>To open a txt/markdown drop them here</span>
+                <div className={'toolContainer'}>
+                    <SaveButton />
+                    <FullScreenSwitcher />
+                </div>
+            </header>
             <div className={'areaContainer'}>
                 <TextArea />
             </div>
-            <SaveButton />
             <WordCounter />
         </>
     );

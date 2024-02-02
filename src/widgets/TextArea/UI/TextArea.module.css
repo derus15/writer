@@ -1,9 +1,18 @@
+.container {
+    display: flex;
+    height: 20%;
+    width: 75vw;
+    background: darkred;
+    margin-bottom: 160px;
+}
+
 .textarea {
     font-size: 21px;
     background: #242424;
     border: none;
     width: 75vw;
-    height: 75vh;
+    min-height: 55vh;
+    height: 25%;
     resize: none;
     color: white;
     opacity: 100%;

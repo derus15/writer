@@ -1,4 +1,4 @@
-import { SyntheticEvent, useEffect, useRef}  from 'react';
+import {SyntheticEvent, useEffect, useLayoutEffect, useRef} from 'react';
 import style from './TextArea.module.css';
 import { useTextStore } from 'entities/Text';
 
@@ -8,10 +8,14 @@ export const TextArea = () => {
     const text = useTextStore.use.text();
     const textArea = useRef<HTMLDivElement | null>(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (textArea.current) {
             textArea.current.textContent = text;
         }
+    }, [text]);
+
+    useEffect(() => {
+        window.scrollTo(0, document.body.scrollHeight - window.innerHeight);
     }, [text]);
 
     const textEdit = (e: SyntheticEvent<HTMLDivElement>) => {
@@ -20,12 +24,13 @@ export const TextArea = () => {
     };
 
     return (
-        <div
-            ref={textArea}
-            contentEditable="plaintext-only"
-            className={style.textarea}
-            onInput={textEdit}
-        />
+        <div className={style.container}>
+            <div
+                ref={textArea}
+                contentEditable="plaintext-only"
+                className={style.textarea}
+                onInput={textEdit}
+            />
+        </div>
     );
 };
-

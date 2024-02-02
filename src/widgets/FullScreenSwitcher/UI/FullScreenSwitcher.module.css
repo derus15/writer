@@ -1,7 +1,4 @@
 .fullscreen {
-    position: absolute;
-    right: 2rem;
-    top: 40px;
     width: 15px;
     height: 15px;
     border: white 2px solid;
