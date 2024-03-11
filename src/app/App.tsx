@@ -12,7 +12,6 @@ function App() {
         <>
             <header className={'header'}>
                 <FileLoader />
-                <span className={'title'}>To open a txt/markdown drop them here</span>
                 <div className={'toolContainer'}>
                     <SaveButton />
                     <FullScreenSwitcher />

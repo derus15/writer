@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { createStore } from 'app/providers/storeProvider.ts';
-import { persist } from 'zustand/middleware';
+import {persist} from 'zustand/middleware';
 
 type Store = {
     text: string

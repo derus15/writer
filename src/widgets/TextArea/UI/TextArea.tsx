@@ -12,7 +12,7 @@ export const TextArea = () => {
         if (textArea.current) {
             textArea.current.textContent = text;
         }
-    }, [text]);
+    }, [setText]);
 
     useEffect(() => {
         window.scrollTo(0, document.body.scrollHeight - window.innerHeight);
